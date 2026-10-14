@@ -4,7 +4,7 @@ cask "legible" do
 
   url "https://github.com/tom-xlsx/legible/releases/download/v#{version}/Legible-#{version}.zip"
   name "Legible"
-  desc "Markdown reader for macOS with a Quick Look extension"
+  desc "Markdown reader with a Quick Look extension"
   homepage "https://github.com/tom-xlsx/legible"
 
   livecheck do
@@ -12,8 +12,8 @@ cask "legible" do
     strategy :github_latest
   end
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Legible.app"
   binary "#{appdir}/Legible.app/Contents/Resources/bin/legible"
@@ -22,6 +22,7 @@ cask "legible" do
 
   zap trash: [
     "~/Library/Application Support/Legible",
+    "~/Library/Caches/io.github.tom-xlsx.Legible",
     "~/Library/Containers/io.github.tom-xlsx.Legible.QuickLook",
     "~/Library/Preferences/io.github.tom-xlsx.Legible.plist",
     "~/Library/Saved Application State/io.github.tom-xlsx.Legible.savedState",

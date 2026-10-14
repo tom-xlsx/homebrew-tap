@@ -1,6 +1,6 @@
 cask "legible" do
   version "0.13.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "1f07e0cc7bbcec649e63cbfa4fce84205be587ecc0bd17475efeebf4a84bf628"
 
   url "https://github.com/tom-xlsx/legible/releases/download/v#{version}/Legible-#{version}.zip"
   name "Legible"
